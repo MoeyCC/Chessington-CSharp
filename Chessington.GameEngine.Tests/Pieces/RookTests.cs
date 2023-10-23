@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Chessington.GameEngine.Pieces;
 using FluentAssertions;
 using NUnit.Framework;
@@ -26,7 +27,7 @@ public class RookTests
 
         //Get rid of our starting location.
         expectedMoves.RemoveAll(s => s == Square.At(4, 4));
-
+                
         moves.Should().Contain(expectedMoves);
     }
 }
